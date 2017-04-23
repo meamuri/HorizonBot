@@ -1,0 +1,12 @@
+# Секретный токен для нашего телеграмм бота
+token.js
+
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
