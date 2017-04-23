@@ -1,6 +1,7 @@
 
-const TokenFile = require('./token')
+const TokenFile = require('./src/token.js')
 const TelegramBot = require('node-telegram-bot-api');
+const AnswersResources = require('./src/resources.js');
 
 // replace the value below with the Telegram token you receive from @BotFather
 const token = TokenFile.TOKEN;
@@ -27,5 +28,5 @@ bot.on('message', (msg) => {
     const chatId = msg.chat.id;
 
     // send a message to the chat acknowledging receipt of their message
-    bot.sendMessage(chatId, 'Received your message');
+    bot.sendMessage(chatId, AnswersResources.InfoAboutDate25);
 });
