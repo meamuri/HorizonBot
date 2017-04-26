@@ -9,19 +9,10 @@ const token = TokenFile.TOKEN;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
 
-bot.onText(/\/show (.+)/, (msg, match) => {
+bot.onText(/(.+)/, (msg, match) => {
     const chatId = msg.chat.id;
     
     const answer = App.matcher(match[1])
-
-    // send a message to the chat acknowledging receipt of their message
-    bot.sendMessage(chatId, answer);
-});
-
-bot.onText(/\/mc/, (msg, match) => {
-    const chatId = msg.chat.id;
-    
-    const answer = "Сегодня мастер класс покажет"
 
     // send a message to the chat acknowledging receipt of their message
     bot.sendMessage(chatId, answer);
